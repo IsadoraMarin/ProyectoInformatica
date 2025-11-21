@@ -1,12 +1,12 @@
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import PaginaInicio from './componentes/PaginaInicio';
-import Catalogo from './componentes/Catalogo';
-import CarritoDeCompras from './componentes/CarritoDeCompras';
-import Registro from './componentes/Registro';
-import Seguimiento from './componentes/Seguimiento';
-import Sesion from './componentes/Sesion';
-import Extras from './componentes/Extras';
+import PaginaInicio from './componentes/organisms/PaginaInicio';
+import Catalogo from './componentes/molecules/Catalogo';
+import CarritoDeCompras from './componentes/organisms/CarritoDeCompras';
+import Registro from './componentes/organisms/Registro';
+import Seguimiento from './componentes/organisms/Seguimiento';
+import Sesion from './componentes/organisms/Sesion';
+import Extras from './componentes/organisms/Extras';
 
 function App() {
   return (
