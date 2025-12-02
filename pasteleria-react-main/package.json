@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "karma start karma.conf.cjs --single-run",
-    "test:watch": "karma start karma.conf.cjs"
+    "test:watch": "karma start karma.conf.cjs",
+    "start": "react-scripts-start"
   },
   "dependencies": {
     "react": "^19.1.1",
