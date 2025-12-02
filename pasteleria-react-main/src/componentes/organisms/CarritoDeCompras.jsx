@@ -2,44 +2,44 @@ import React, { useState } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 
-const PRODUCTOS = [
-  { nombre: 'Torta Cuadrada de Chocolate', precio: 45000 },
-  { nombre: 'Torta Cuadrada de Frutas', precio: 50000 },
-  { nombre: 'Torta Circular de Vainilla', precio: 40000 },
-  { nombre: 'Torta Circular de Manjar', precio: 42000 },
-];
+// const PRODUCTOS = [
+//   { nombre: 'Torta Cuadrada de Chocolate', precio: 45000 },
+//   { nombre: 'Torta Cuadrada de Frutas', precio: 50000 },
+//   { nombre: 'Torta Circular de Vainilla', precio: 40000 },
+//   { nombre: 'Torta Circular de Manjar', precio: 42000 },
+// ];
 
-const CarritoDeCompras = () => {
-  const [carrito, setCarrito] = useState([]);
-  const [productoSeleccionado, setProductoSeleccionado] = useState(PRODUCTOS[0].nombre);
+// const CarritoDeCompras = () => {
+//   const [carrito, setCarrito] = useState([]);
+//   const [productoSeleccionado, setProductoSeleccionado] = useState(PRODUCTOS[0].nombre);
 
-  const handleAgregar = () => {
-    const producto = PRODUCTOS.find(p => p.nombre === productoSeleccionado);
-    setCarrito(prev => {
-      const existe = prev.find(item => item.nombre === producto.nombre);
-      if (existe) {
-        return prev.map(item =>
-          item.nombre === producto.nombre
-            ? { ...item, cantidad: item.cantidad + 1 }
-            : item
-        );
-      } else {
-        return [...prev, { ...producto, cantidad: 1 }];
-      }
-    });
-  };
+//   const handleAgregar = () => {
+//     const producto = PRODUCTOS.find(p => p.nombre === productoSeleccionado);
+//     setCarrito(prev => {
+//       const existe = prev.find(item => item.nombre === producto.nombre);
+//       if (existe) {
+//         return prev.map(item =>
+//           item.nombre === producto.nombre
+//             ? { ...item, cantidad: item.cantidad + 1 }
+//             : item
+//         );
+//       } else {
+//         return [...prev, { ...producto, cantidad: 1 }];
+//       }
+//     });
+//   };
 
-  const handleEliminar = (nombre) => {
-    setCarrito(prev => prev.filter(item => item.nombre !== nombre));
-  };
+//   const handleEliminar = (nombre) => {
+//     setCarrito(prev => prev.filter(item => item.nombre !== nombre));
+//   };
 
-  const handleCantidad = (nombre, cantidad) => {
-    setCarrito(prev => prev.map(item =>
-      item.nombre === nombre ? { ...item, cantidad: cantidad } : item
-    ));
-  };
+//   const handleCantidad = (nombre, cantidad) => {
+//     setCarrito(prev => prev.map(item =>
+//       item.nombre === nombre ? { ...item, cantidad: cantidad } : item
+//     ));
+//   };
 
-  const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
+//   const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
 
   return (
     <>
@@ -123,6 +123,5 @@ const CarritoDeCompras = () => {
       <Footer />
     </>
   );
-};
 
 export default CarritoDeCompras;
